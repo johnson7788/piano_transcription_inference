@@ -24,7 +24,7 @@ def inference(args):
     (audio, _) = load_audio(audio_path, sr=sample_rate, mono=True)
 
     # Transcriptor
-    transcriptor = PianoTranscription(device=device, checkpoint_path=None)
+    transcriptor = PianoTranscription(device=device, checkpoint_path='pretrain_model.pth')
     """device: 'cuda' | 'cpu'
     checkpoint_path: None for default path, or str for downloaded checkpoint path.
     """
